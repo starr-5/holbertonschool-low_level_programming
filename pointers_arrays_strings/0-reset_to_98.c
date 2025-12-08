@@ -6,5 +6,5 @@
  */
 void reset_to_98(int *n)
 {
-    *n = 98;  // set the value at the address to 98
+    *n = 98;  /* set the value at the address to */
 }
