@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - checks the times_table function
  *
- * Return: Always 0.
+ * Return: 0
  */
 int main(void)
 {
-    times_table();
-    return (0);
+	times_table();
+	return (0);
 }
