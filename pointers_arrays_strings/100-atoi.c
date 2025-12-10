@@ -21,3 +21,9 @@ int _atoi(char *s)
 			result = result * 10 + (s[i] - '0');
 		}
 		else if (num_started)
+			break;
+		i++;
+	}
+
+	return (sign * (int)result);
+}
