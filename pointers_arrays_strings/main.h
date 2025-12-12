@@ -3,6 +3,7 @@
 /*Prototype for reset_to_98 function */
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n);
 void rev_string(char *s);
 void puts2(char *str);
 void puts_half(char *str);
