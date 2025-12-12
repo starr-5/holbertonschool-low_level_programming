@@ -17,5 +17,8 @@ void reverse_array(int *a, int n)
 
 	for (i = 0; i < n / 2; i++)
 	{
-		temp = a[i];
-		a[i]
+		temp = a[i];           /* store current element */
+		a[i] = a[n - 1 - i];   /* replace it with the mirrored element */
+		a[n - 1 - i] = temp;   /* set mirrored element to original */
+	}
+}
