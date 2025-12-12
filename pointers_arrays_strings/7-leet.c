@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * leet - encodes a string into 1337
  * @s: pointer to the string to encode
@@ -11,10 +10,12 @@
  *   - o and O -> 0
  *   - t and T -> 7
  *   - l and L -> 1
- * Only one if statement and two loops are used. No switch or ternary.
+ * Only one if statement and two loops are used. No use of switch-case
+ * or ternary operator.
  *
  * Return: Pointer to the encoded string @s.
  */
+
 char *leet(char *s)
 {
 	int i, j;
