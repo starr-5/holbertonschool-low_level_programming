@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 /*Prototype for reset_to_98 function */
+char *_strcat(char *dest, char *src);
 void rev_string(char *s);
 void puts2(char *str);
 void puts_half(char *str);
