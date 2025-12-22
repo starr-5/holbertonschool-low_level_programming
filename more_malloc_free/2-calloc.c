@@ -21,7 +21,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
     if (ptr == NULL)
         return (NULL);
 
-    /* Initialize all bytes to 0 */
     for (i = 0; i < total; i++)
         ptr[i] = 0;
 
