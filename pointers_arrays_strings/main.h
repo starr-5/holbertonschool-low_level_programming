@@ -21,4 +21,5 @@ void _puts(char *str);
 int _putchar(char c);
 /* Prototype for 4-print_rev.c */
 void print_rev(char *s);
+char *_memset(char *s, char b, unsigned int n);
 #endif /* MAIN_H */
