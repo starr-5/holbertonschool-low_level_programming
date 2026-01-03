@@ -2,44 +2,59 @@
 #include "dog.h"
 
 /**
- * new_dog - Creates a new dog
- * @name: Name of the dog
- * @age: Age of the dog
- * @owner: Owner of the dog
+ * _strdup - duplicates a string
+ * @str: string to duplicate
  *
- * Return: Pointer to the new dog, or NULL if failure
+ * Return: pointer to new string, or NULL
+ */
+char *_strdup(char *str)
+{
+	char *copy;
+	int i, len = 0;
+
+	if (str == NULL)
+		return (NULL);
+
+	while (str[len])
+		len++;
+
+	copy = malloc(sizeof(char) * (len + 1));
+	if (copy == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
+		copy[i] = str[i];
+
+	return (copy);
+}
+
+/**
+ * new_dog - creates a new dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ *
+ * Return: pointer to new dog, or NULL
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	int i, name_len = 0, owner_len = 0;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
-	/* count name length */
-	while (name[name_len])
-		name_len++;
-
-	/* count owner length */
-	while (owner[owner_len])
-		owner_len++;
-
-	/* allocate dog */
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
 
-	/* allocate name */
-	dog->name = malloc(sizeof(char) * (name_len + 1));
+	dog->name = _strdup(name);
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 
-	/* allocate owner */
-	dog->owner = malloc(sizeof(char) * (owner_len + 1));
+	dog->owner = _strdup(owner);
 	if (dog->owner == NULL)
 	{
 		free(dog->name);
@@ -47,16 +62,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	/* copy name */
-	for (i = 0; i <= name_len; i++)
-		dog->name[i] = name[i];
-
-	/* copy owner */
-	for (i = 0; i <= owner_len; i++)
-		dog->owner[i] = owner[i];
-
 	dog->age = age;
 
 	return (dog);
-}
-
+}	
