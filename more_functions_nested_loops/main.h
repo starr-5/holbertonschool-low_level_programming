@@ -11,4 +11,5 @@ void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
 int _putchar.c(int c);
+void print_numbers(void);
 #endif /* MAIN_H */
